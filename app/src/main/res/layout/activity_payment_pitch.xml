@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.payment.payment_pitch">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:divider="?android:dividerHorizontal"
+        android:showDividers="end"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Booking Details"></com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/title"
+                tools:text="Pitch amman"
+                android:textStyle="bold"
+                android:maxLines="2"
+                android:textAppearance="?attr/textAppearanceHeadline5"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/open"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                tools:text="8:00 AM to 12 PM"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp"
+                android:drawablePadding="8dp"
+                app:drawableStartCompat="@drawable/ic_today_black_24dp" />
+
+
+            <TextView
+                android:id="@+id/off_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                tools:text="@string/off_days_friday_saturday"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/birth_day"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="@string/start_date"
+                app:boxBackgroundMode="outline"
+                app:endIconDrawable="@drawable/ic_date_range_black_24dp"
+                app:endIconMode="custom">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/birth_day_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="date" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/hour_l"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:hintEnabled="false"
+                    app:boxBackgroundMode="outline"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    app:endIconMode="dropdown_menu"
+                    android:imeOptions="actionNext"
+                    android:layout_marginEnd="16dp">
+
+                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                        android:id="@+id/hour"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:enabled="false"
+                        android:hint="@string/hour"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:textSize="12sp" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/AML"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:hintEnabled="false"
+                    app:boxBackgroundMode="outline"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    app:endIconMode="dropdown_menu"
+                    android:imeOptions="actionNext">
+
+                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                        android:id="@+id/AM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:inputType="number"
+                        android:textSize="12sp"
+                        android:text="@string/pm"
+                        android:imeOptions="actionNext"
+                        android:maxLines="1"
+                        android:enabled="false" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+
+            <RadioGroup
+                android:id="@+id/radio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
+
+
+                <RadioButton
+                    android:id="@+id/_60"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/period_60_minutes_price"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+
+                <RadioButton
+                    android:id="@+id/_120"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/period_120_minutes_price"
+                    android:textSize="17sp" />
+
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/Next"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@android:color/white"
+            android:text="@string/checkout"
+            android:textAllCaps="true"
+            app:cornerRadius="8dp"
+            android:layout_alignParentBottom="true"
+            app:backgroundTint="#cf1b1b" />
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

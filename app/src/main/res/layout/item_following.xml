@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:focusable="true"
+    android:clickable="true">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:scaleType="centerCrop"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/movie"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:id="@+id/Page_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/restaurant_pizza_hut"
+        android:textColor="@android:color/black"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/image"
+        android:layout_toStartOf="@id/value"
+        android:textAppearance="?attr/textAppearanceSubtitle1"
+        android:layout_marginEnd="8dp"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+    <TextView
+        android:id="@+id/value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="popular : 1.5"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:maxLines="1"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+
+        />
+
+
+</RelativeLayout>

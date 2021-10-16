@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/page_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/menu"
+            android:textColor="@android:color/black"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="24sp"
+            android:paddingEnd="0dp"
+            android:paddingStart="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:id="@+id/profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="16dp"
+            android:text="@string/my_profile"
+            android:textSize="18sp"
+            android:padding="16dp"
+            android:textColor="@android:color/black"
+            android:background="?android:attr/selectableItemBackground"
+            android:focusable="true"
+            android:clickable="true"
+            app:drawableStartCompat="@drawable/ic_user" />
+
+        <TextView
+            android:id="@+id/reservation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="16dp"
+            android:text="@string/res"
+            android:textSize="18sp"
+            android:padding="16dp"
+            android:textColor="@android:color/black"
+            android:background="?android:attr/selectableItemBackground"
+            android:focusable="true"
+            android:clickable="true"
+            app:drawableStartCompat="@drawable/ic_reservation" />
+
+        <TextView
+            android:id="@+id/interests"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="16dp"
+            android:text="@string/interests"
+            android:textSize="18sp"
+            android:padding="16dp"
+            android:textColor="@android:color/black"
+            android:background="?android:attr/selectableItemBackground"
+            android:focusable="true"
+            android:clickable="true"
+            app:drawableStartCompat="@drawable/ic_love" />
+
+        <TextView
+            android:id="@+id/statistics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="16dp"
+            android:text="@string/statistics"
+            android:textSize="18sp"
+            android:padding="16dp"
+            android:textColor="@android:color/black"
+            android:background="?android:attr/selectableItemBackground"
+            android:focusable="true"
+            android:clickable="true"
+            app:drawableStartCompat="@drawable/ic_bar_chart" />
+
+        <TextView
+            android:id="@+id/services"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="16dp"
+            android:text="@string/services"
+            android:textSize="18sp"
+            android:padding="16dp"
+            android:textColor="@android:color/black"
+            android:background="?android:attr/selectableItemBackground"
+            android:focusable="true"
+            android:clickable="true"
+            app:drawableStartCompat="@drawable/ic_support" />
+
+        <TextView
+            android:id="@+id/check_later"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="16dp"
+            android:text="@string/check_later"
+            android:textSize="18sp"
+            android:padding="16dp"
+            android:textColor="@android:color/black"
+            android:background="?android:attr/selectableItemBackground"
+            android:focusable="true"
+            android:clickable="true"
+            app:drawableStartCompat="@drawable/ic_history" />
+
+
+        <TextView
+            android:id="@+id/log_out"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="16dp"
+            android:text="@string/log_out"
+            android:textSize="18sp"
+            android:padding="16dp"
+            android:textColor="@android:color/black"
+            android:background="?android:attr/selectableItemBackground"
+            android:focusable="true"
+            android:clickable="true"
+            app:drawableStartCompat="@drawable/ic_log_out" />
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/event"
+        android:title="@string/event" />
+    <item
+        android:id="@+id/restaurant"
+        android:title="@string/restaurant" />
+    <item
+        android:id="@+id/gym"
+        android:title="@string/gym" />
+    <item
+        android:id="@+id/football"
+        android:title="Pitch" />
+    <item
+        android:id="@+id/Mall"
+        android:title="Store" />
+</menu>

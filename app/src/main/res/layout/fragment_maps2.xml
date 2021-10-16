@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Fragment.MapsFragment">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/activity_main" />
+
+    <HorizontalScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/white"
+        android:scrollbars="none">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chip_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            app:selectionRequired="true"
+            app:singleLine="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/all_chip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:gravity="center"
+                android:text=" All"
+                android:textColor="@drawable/color2"
+                app:chipBackgroundColor="@drawable/color3"
+                app:chipStrokeColor="#B0AAAAAA"
+                app:chipStrokeWidth=".3dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/event_chip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/event"
+                android:textColor="@drawable/color2"
+                app:chipBackgroundColor="@drawable/color3"
+                app:chipStrokeColor="#B0AAAAAA"
+                app:chipStrokeWidth=".3dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/pitch_chip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pitch"
+                android:textColor="@drawable/color2"
+                app:chipBackgroundColor="@drawable/color3"
+                app:chipStrokeColor="#B0AAAAAA"
+                app:chipStrokeWidth=".3dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/gym_chip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gym"
+                android:textColor="@drawable/color2"
+                app:chipBackgroundColor="@drawable/color3"
+                app:chipStrokeColor="#B0AAAAAA"
+                app:chipStrokeWidth=".3dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/shopping_chip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/store"
+                android:textColor="@drawable/color2"
+                app:chipBackgroundColor="@drawable/color3"
+                app:chipStrokeColor="#B0AAAAAA"
+                app:chipStrokeWidth=".3dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/restaurant_chip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/restaurant"
+                android:textColor="@drawable/color2"
+                app:chipBackgroundColor="@drawable/color3"
+                app:chipStrokeColor="#B0AAAAAA"
+                app:chipStrokeWidth=".3dp" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </HorizontalScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/c"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="6dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/scroll">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/s"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="none"
+            app:endIconMode="custom"
+            app:hintEnabled="false"
+            app:endIconDrawable="@drawable/ic_baseline_my_location_24"
+            app:startIconDrawable="@drawable/ic_baseline_search_24"
+            android:background="@android:color/white">
+
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/search_bar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/enter_address_place_city"
+                android:inputType="text"
+                android:imeOptions="actionSearch" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

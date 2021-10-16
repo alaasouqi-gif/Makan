@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="0dp"
+        android:paddingBottom="11dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="4dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            app:cardCornerRadius="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!-- Media -->
+
+                <ImageView
+
+                    android:id="@+id/image_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="118dp"
+                    android:contentDescription="@string/tab_text_1"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/android" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/name_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="@string/restaurant_pizza_hut"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        android:textSize="20sp"
+                        android:ellipsize="end"
+                        android:textColor="#2B3D4D" />
+
+                    <TextView
+                        android:id="@+id/page_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:text="@string/restaurant_pizza_hut"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:layout_marginTop="4dp"
+                        android:textColor="#B4BAC0"
+                        android:fontFamily="sans-serif-light" />
+
+                    <TextView
+                        android:id="@+id/place_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="@string/amman"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:ellipsize="end"
+                        android:textColor="#B4BAC0"
+                        android:fontFamily="sans-serif-light" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

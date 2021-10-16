@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingBottom="16dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/done"
+            android:visibility="gone"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="50dp"
+            android:elevation="0dp"
+            app:cardBackgroundColor="@color/material_on_background_disabled">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_done_black_24dp" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/android"
+
+            />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/food"
+        android:layout_gravity="center"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textAppearance="?attr/textAppearanceSubtitle2"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+
+</LinearLayout>

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.edit.edit_store">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:divider="?android:dividerHorizontal"
+        android:showDividers="end"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="@android:color/white"
+            app:expandedTitleGravity="bottom"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:scrimAnimationDuration="300">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/restaurant" />
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:divider="?android:dividerHorizontal"
+                android:showDividers="end"
+                app:layout_collapseMode="pin"
+
+                >
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/d1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:divider="?android:dividerVertical"
+                android:drawablePadding="8dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:showDividers="end"
+                app:drawableEndCompat="@drawable/ic_pencil">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="8dp"
+                    android:maxLines="2"
+                    android:text="@string/jordan_digital_motorsport_cup"
+                    android:textAppearance="?attr/textAppearanceHeadline5"
+                    android:textColor="@color/title"
+                    android:textStyle="bold"
+                    app:drawableEndCompat="@drawable/ic_pencil" />
+
+                <TextView
+                    android:id="@+id/categories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:drawablePadding="8dp"
+                    android:textSize="16sp"
+                    tools:text="@string/musical" />
+
+
+                <TextView
+                    android:id="@+id/start_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:drawablePadding="8dp"
+                    android:text="@string/start"
+                    android:textColor="@color/Details"
+                    android:textSize="16sp"
+                    app:drawableEndCompat="@drawable/ic_pencil"
+                    app:drawableStartCompat="@drawable/ic_today_black_24dp" />
+
+                <TextView
+                    android:id="@+id/end_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:drawablePadding="8dp"
+                    android:text="@string/end"
+                    android:textColor="@color/Details"
+                    android:textSize="16sp"
+                    app:drawableStartCompat="@drawable/ic_today_black_24dp" />
+
+                <TextView
+                    android:id="@+id/off_day"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/off_day"
+                    android:textColor="@color/Details"
+                    android:textSize="16sp"
+                    app:drawableStartCompat="@drawable/ic_today_black_24dp" />
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:drawablePadding="8dp"
+                    android:text="@string/amman_city_mall"
+                    android:textColor="@color/Details"
+                    android:textSize="16sp"
+                    app:drawableEndCompat="@drawable/ic_pencil"
+                    app:drawableStartCompat="@drawable/ic_location_on_black_24dp" />
+
+
+                <TextView
+                    android:id="@+id/rate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:drawablePadding="8dp"
+                    android:text="@string/r"
+                    android:textColor="@color/Details"
+                    android:textSize="16sp"
+                    app:drawableStartCompat="@drawable/ic_star_border_black_24dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/d2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/d1"
+                android:divider="?android:dividerVertical"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:showDividers="end">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/about"
+                    android:textColor="@color/title"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:drawablePadding="8dp"
+                    android:text="@string/m"
+                    android:textColor="@color/Details"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/i"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/d2"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/edit_gallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="@string/gallery"
+                    android:textColor="@color/title"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:drawableEndCompat="@drawable/ic_pencil" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview_gallary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:id="@+id/menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="?android:dividerVertical"
+                    android:padding="16dp"
+                    android:showDividers="end">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/image_m"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginEnd="16dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/food1" />
+
+                    <TextView
+                        android:id="@+id/following"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/image_m"
+                        android:text="@string/menu"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        app:drawableEndCompat="@drawable/ic_arrow_forward_black_50dp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/i"
+                android:orientation="vertical"
+                android:padding="16dp"
+
+
+                >
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/contacts"
+                    android:textColor="@color/title"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/email0"
+                    android:textColor="@color/Details"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/phone0"
+                    android:textColor="@color/Details"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

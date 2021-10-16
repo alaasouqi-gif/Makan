@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/not"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#E7F3FF"
+
+    android:focusable="true"
+    android:clickable="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:padding="16dp"
+
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:scaleType="centerCrop"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/movie" />
+
+
+        <TextView
+            tools:ignore="RelativeOverlap"
+            android:id="@+id/Page_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tab_text_1"
+            android:layout_toEndOf="@id/image"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"
+            android:textColor="#2B3D4D"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Page_name"
+            android:layout_toEndOf="@id/image"
+            android:textColor="#B4BAC0"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="2"
+            android:textSize="14sp"
+            android:ellipsize="end"
+
+            />
+
+        <ImageView
+            android:id="@+id/not_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_more_vert_black_24dp"
+            tools:ignore="ContentDescription"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:focusable="true"
+            android:clickable="true"
+
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>

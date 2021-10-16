@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.makan">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <service
+            android:name=".sending_email.CouponsSrevice"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity android:name=".activity.Top_services" />
+        <activity android:name=".activity.top10" />
+        <activity android:name=".activity.sign_up2" />
+        <activity android:name=".activity.change_password" />
+
+        <activity android:name=".activity.my_profile" />
+        <activity android:name=".activity.list.list_monitor" />
+        <activity android:name=".activity.payment.payment_restaurant" />
+        <activity android:name=".activity.payment.payment_gym" />
+        <activity android:name=".activity.payment.payment_pitch" />
+        <activity android:name=".activity.payment.payment_event" />
+        <activity android:name=".activity.payment.CreditCard" />
+        <activity android:name=".activity.add_services.add_gym_reservation" />
+        <activity android:name=".activity.add_services.add_gallery" />
+        <activity android:name=".activity.add_services.add_pitch" />
+        <activity android:name=".activity.add_services.add_Shopping" />
+        <activity android:name=".activity.add_services.add_gym" />
+        <activity android:name=".activity.edit.edit_restaurant" />
+        <activity android:name=".activity.edit.edit_event" />
+        <activity android:name=".activity.edit.edit_store" />
+        <activity android:name=".activity.edit.edit_pitch" />
+        <activity android:name=".activity.edit.edit_gym" />
+
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity android:name=".activity.SendResetPassEmail" />
+        <activity android:name=".activity.add_services.add_menu" />
+        <activity android:name=".activity.add_services.add_restaurant" />
+        <activity android:name=".activity.add_services.add_event" />
+        <activity android:name=".activity.services" />
+        <activity android:name=".activity.menu" />
+        <activity android:name=".activity.edit_menu" />
+        <activity android:name=".activity.edit.edit_location" />
+        <activity android:name=".activity.edit.edit_gallery" />
+        <activity android:name=".activity.edit.edit_gym_reservation" />
+
+        <activity android:name=".activity.choose_interest" />
+        <activity android:name=".activity.following" />
+        <activity android:name=".activity.list.list_home" />
+        <activity android:name=".activity.item.item_restaurant_stores" />
+        <activity android:name=".activity.list.list_Reservations" />
+        <activity android:name=".activity.list.list_check_later" />
+        <activity android:name=".activity.Search" />
+        <activity android:name=".activity.item.item_Event" />
+        <activity android:name=".activity.item.item_my_reservation" />
+        <activity android:name=".activity.item.item_pitch_gym" />
+        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.sign_up" />
+        <activity android:name=".activity.offers" />
+        <activity android:name=".activity.Log_in" />
+        <activity
+            android:name=".activity.add_services.SelectLocation"
+            android:label="Map" />
+        <activity android:name=".activity.Splash_Screen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".Fragment.GeofireService"
+            android:enabled="true"
+            android:exported="false" />
+    </application>
+
+</manifest>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.add_services.add_gallery">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:divider="?android:dividerHorizontal"
+        android:showDividers="end"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Add Gallery">
+
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/gallery_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/upload"
+            android:layout_width="wrap_content"
+            android:layout_height="54dp"
+            android:background="@android:color/white"
+            android:text="@string/upload_photo"
+            app:cornerRadius="20dp"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_alignParentBottom="true"
+            android:backgroundTint="#9A33B5"
+            android:layout_margin="16dp"
+
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/Next"
+            android:layout_width="wrap_content"
+            android:layout_height="54dp"
+            android:background="@android:color/white"
+            android:text="@string/add"
+            app:cornerRadius="20dp"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="#9A33B5"
+            android:layout_margin="16dp"
+
+            />
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

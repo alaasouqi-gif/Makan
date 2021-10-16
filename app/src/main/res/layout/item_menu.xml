@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="16dp">
+
+    <TextView
+        android:id="@+id/name_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:text="@string/restaurant_pizza_hut"
+        android:textSize="18sp"
+        android:ellipsize="end"
+        android:textColor="@android:color/black"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="16dp"
+        android:layout_toEndOf="@id/card"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:text="@string/_21_00_jd"
+        android:ellipsize="end"
+        android:layout_below="@id/name_menu"
+        android:layout_toEndOf="@id/card"
+        android:layout_marginStart="8dp"
+
+        />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="6dp"
+        android:layout_alignParentTop="true"
+        android:layout_margin="1dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/food10"
+            android:scaleType="centerCrop" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/remove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_more_vert_black_24dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_gravity="end" />
+
+</RelativeLayout>

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context=".activity.edit.edit_restaurant"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        android:showDividers="end"
+        android:divider="?android:dividerHorizontal"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:expandedTitleGravity="bottom"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="@android:color/white"
+            app:scrimAnimationDuration="300">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/restaurant"
+                android:scaleType="centerCrop" />
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                android:showDividers="end"
+                android:divider="?android:dividerHorizontal"
+
+                >
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/d1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:showDividers="end"
+                android:divider="?android:dividerVertical"
+                android:layout_marginBottom="8dp"
+                android:padding="16dp"
+                android:drawablePadding="8dp"
+                app:drawableEndCompat="@drawable/ic_pencil">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/title"
+                    android:text="@string/jordan_digital_motorsport_cup"
+                    android:textStyle="bold"
+                    android:maxLines="2"
+                    android:textAppearance="?attr/textAppearanceHeadline5"
+                    android:drawablePadding="8dp"
+                    app:drawableEndCompat="@drawable/ic_pencil" />
+
+                <TextView
+                    android:id="@+id/categories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="@string/musical"
+                    android:layout_marginBottom="16dp"
+                    android:textSize="16sp"
+                    android:drawablePadding="8dp" />
+
+
+                <TextView
+                    android:id="@+id/start_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Details"
+                    android:text="@string/start"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="16dp"
+                    android:drawablePadding="8dp"
+                    app:drawableStartCompat="@drawable/ic_today_black_24dp"
+                    app:drawableEndCompat="@drawable/ic_pencil" />
+
+                <TextView
+                    android:id="@+id/end_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Details"
+                    android:text="@string/end"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="16dp"
+                    android:drawablePadding="8dp"
+                    app:drawableStartCompat="@drawable/ic_today_black_24dp" />
+
+                <TextView
+                    android:id="@+id/off_day"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Details"
+                    android:text="@string/off_day"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="16dp"
+                    app:drawableStartCompat="@drawable/ic_today_black_24dp" />
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Details"
+                    android:text="@string/amman_city_mall"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="16dp"
+                    android:drawablePadding="8dp"
+                    app:drawableStartCompat="@drawable/ic_location_on_black_24dp"
+                    app:drawableEndCompat="@drawable/ic_pencil" />
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Details"
+                    tools:text="Price : "
+                    android:textSize="16sp"
+                    app:drawableStartCompat="@drawable/ic_attach_money_black_24dp"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:id="@+id/rate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Details"
+                    android:text="@string/r"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="16dp"
+                    android:drawablePadding="8dp"
+                    app:drawableStartCompat="@drawable/ic_star_border_black_24dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/d2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/d1"
+                android:showDividers="end"
+                android:divider="?android:dividerVertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/title"
+                    android:text="@string/about"
+                    android:textSize="24sp"
+                    android:layout_marginBottom="8dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Details"
+                    android:text="@string/m"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"
+                    android:drawablePadding="8dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/i"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/d2"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/edit_gallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/title"
+                    android:text="@string/gallery"
+                    android:textSize="24sp"
+                    android:layout_margin="16dp"
+                    android:textStyle="bold"
+                    app:drawableEndCompat="@drawable/ic_pencil" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview_gallary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:id="@+id/menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:showDividers="end"
+                    android:divider="?android:dividerVertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/image_m"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:scaleType="centerCrop"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/food1"
+                        android:layout_alignParentStart="true" />
+
+                    <TextView
+                        android:id="@+id/following"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/image_m"
+                        android:text="@string/menu"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        android:layout_centerVertical="true"
+                        app:drawableEndCompat="@drawable/ic_arrow_forward_black_50dp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_below="@id/i"
+                android:id="@+id/contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+
+
+                >
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/title"
+                    android:text="@string/contacts"
+                    android:textSize="24sp"
+                    android:layout_marginBottom="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Details"
+                    android:text="@string/email0"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:id="@+id/phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Details"
+                    android:text="@string/phone0"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="16dp" />
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/offer"
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@android:color/white"
+                    android:text="@string/add_offer"
+                    android:textAllCaps="true"
+                    app:cornerRadius="8dp"
+                    app:backgroundTint="#cf1b1b"
+                    android:layout_marginBottom="8dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/monitor"
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@android:color/white"
+                    android:text="@string/monitor"
+                    android:textAllCaps="true"
+                    app:cornerRadius="8dp"
+                    app:backgroundTint="#cf1b1b"
+                    android:layout_marginBottom="8dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/re"
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@android:color/white"
+                    android:text="Remove"
+                    android:textAllCaps="true"
+                    app:cornerRadius="8dp"
+                    app:backgroundTint="#cf1b1b"
+                    android:layout_marginBottom="8dp" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
