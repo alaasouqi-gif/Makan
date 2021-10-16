@@ -128,7 +128,7 @@ public class CouponsGenerator {
             @Override
             public void run() {
                 try {
-                    GMailSender sender = new GMailSender("alaa3souqi@gmail.com", "xbuurfwjbbjiiwzg");
+                    GMailSender sender = new GMailSender("", "");
                     sender.sendMail("Makan App",
                             "Congratulations " + fName + ".." + "\n\n" + "You got " + title + " coupon. From " + name + ", " + city + "."
                                     + "\n" + des + "\n"
@@ -136,7 +136,7 @@ public class CouponsGenerator {
                                     + "For more information please contact us on:" + "\n\n"
                                     + phone + "\n\n"
                                     + email,
-                            "obadou8114@gmail.com",
+                            "",
                             recipients);
                 } catch (Exception e) {
                     Log.e("mylog", "Error: " + e.getMessage());
